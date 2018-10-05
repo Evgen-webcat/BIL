@@ -14,4 +14,20 @@ $(document).ready(function () {
         $('.screen_2_content').removeClass('hover');
         $('.screen_2_content').css('background-image', '');
     });
+
+    $('.project').hover(function () {
+        var background = $(this).find('.project_background');
+        var src = background.attr('src');
+
+        $('.project_background').css('opacity', '0');
+        $(this).find('.project_content_paragraph').slideDown();
+        $('.projects').css('background-image', 'url(' + src + ')');
+
+    });
+
+    $('.project').mouseout(function () {
+        $('.project_background').css('opacity', '1');
+        $(this).find('.project_content_paragraph').slideUp();
+        $('.projects').css('background-image', '');
+    });
 });
