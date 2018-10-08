@@ -26,7 +26,7 @@ $(document).ready(function () {
     });
 
     $('.project').mouseout(function () {
-        $('.project_background').css('opacity', '1');
+        $('.project_background').css('opacity', '.7');
         $(this).find('.project_content_paragraph').slideUp();
         $('.projects').css('background-image', '');
     });

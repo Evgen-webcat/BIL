@@ -1,5 +1,134 @@
 //out: null
 
-@media (max-width: 1200px) {
+@media (max-width: 1024px) {
+    .header {
+        left: 50%;
+        transform: translateX(-50%);
 
+        .social_links {
+            display: flex;
+            justify-content: center;
+
+            .social_link {
+                padding: 10px 15px;
+            }
+        }
+    }
+
+    .screen_1 {
+        .logo_wrap {
+            width: 50%;
+        }
+    }
+
+    .screen_2 {
+
+        .screen_2_content {
+            flex-wrap: wrap;
+
+            .services {
+                width: 100%;
+                border-right: none;
+                border-bottom: 1px solid rgba(255, 255, 255, .5);
+
+                &_content {
+                    left: 50px;
+                    text-align: center;
+
+                    .services_content_number {
+                        display: none;
+                    }
+                }
+            }
+
+            &::after {
+                display: none;
+            }
+        }
+    }
+
+    .screen_3 {
+        .screen_paragraph {
+            margin-top: 0;
+        }
+
+        .statistics {
+            display: none;
+        }
+    }
+
+    .screen_5 {
+        &_content {
+            flex-wrap: wrap;
+
+            .employee {
+                width: 50%;
+                height: 50vh;
+
+                &_background {
+                    bottom: 0;
+                    height: 100%;
+                }
+
+                &_content {
+                    bottom: 0;
+                    transform: translateY(100%);
+                    padding: 10px;
+                    height: auto;
+                    text-align: center;
+                    background-color: rgba(28, 81, 188, .6);
+                    transition: .3s ease-in-out;
+
+                    .social {
+                        display: none;
+                    }
+                }
+                &:hover {
+                    .employee_content {
+                        transform: translateY(0);
+                    }
+                    &::after {
+                        display: none;
+                    }
+                }
+            }
+
+            &::before,
+            &::after {
+                display: none;
+            }
+        }
+    }
+
+    .screen_6 {
+        &_content {
+            &_address {
+                width: 100%;
+
+                .contacts {
+                    padding: 0 10px;
+                    text-align: center;
+
+                    .copy {
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+                }
+            }
+
+            &_map {
+                display: none;
+            }
+        }
+    }
+
+    .screen_caption {
+        display: none;
+    }
+
+    .footer {
+        display: none;
+    }
 }
+
+@media (max-width: 768px) {}

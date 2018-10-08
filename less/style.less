@@ -6,11 +6,14 @@
 
 body {
     font-family: Roboto-Regular;
-    background-color: #000;
 }
 
 .ymaps-2-1-69-ground-pane {
     filter: grayscale(1);
+}
+
+.fade {
+    transition: .5s ease-in-out;
 }
 
 .header {
@@ -26,7 +29,7 @@ body {
 
             &_img {
                 fill: #000;
-                transition: .3s;
+                transition: .3s ease-in-out;
             }
 
             &:hover .social_link_img {
@@ -41,6 +44,14 @@ body {
             }
         }
     }
+}
+
+.main {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #000;
 }
 
 .screen_caption {
@@ -69,6 +80,8 @@ body {
     visibility: hidden;
     width: 100vw;
     height: 100vh;
+    backface-visibility: hidden;
+    transform: translateZ(0);
 
     &_background {
         position: absolute;
@@ -76,7 +89,7 @@ body {
         left: 0;
         width: 100%;
         height: 100%;
-        transition: .3s ease-in-out;
+        transition: 1s ease-in-out;
     }
 }
 
@@ -347,6 +360,7 @@ body {
                 height: 100%;
                 object-fit: cover;
                 object-position: center;
+                opacity: .7;
                 transition: .3s ease-in-out;
             }
 
@@ -614,6 +628,24 @@ body {
     }
 }
 
+.screen_prev_up {
+    opacity: 0;
+    animation: prev_up 1s ease-in-out;
+}
+
+.screen_current_up {
+    animation: next_up 1s ease-in-out;
+}
+
+.screen_prev_down {
+    opacity: 0;
+    animation: prev_down 1s ease-in-out;
+}
+
+.screen_current_down {
+    animation: next_down 1s ease-in-out;
+}
+
 .screen_active {
     visibility: visible;
 }
@@ -624,7 +656,7 @@ body {
         position: fixed;
         top: 50%;
         right: 0;
-        transition: .3s ease-in-out;
+        transition: .3s .5s ease-in-out;
 
         .dot {
             position: relative;
@@ -674,12 +706,23 @@ body {
 
         &_img {
             fill: #000;
+            transition: .3s ease-in-out;
 
             &.white {
                 fill: #fff;
             }
         }
     }
+}
+
+.locker {
+    display: none;
+    z-index: 99999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 @import "media";

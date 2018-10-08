@@ -13,6 +13,7 @@ $(document).ready(function () {
                 zoom: 17
             });
 
+            map.behaviors.disable('scrollZoom');
             if ($(this).width() < 1200) {
                 map.behaviors.disable('drag');
             }
