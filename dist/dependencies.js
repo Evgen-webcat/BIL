@@ -93,7 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("window.jQuery = window.$ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n__webpack_require__(/*! ./spincrement */ \"./js/spincrement.js\");\n__webpack_require__(/*! jquery-touchswipe */ \"./node_modules/jquery-touchswipe/jquery.touchSwipe.min.js\");\n\n//# sourceURL=webpack:///./js/dependencies.js?");
+eval("window.jQuery = window.$ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n__webpack_require__(/*! ./spincrement */ \"./js/spincrement.js\");\n__webpack_require__(/*! jquery-touchswipe */ \"./node_modules/jquery-touchswipe/jquery.touchSwipe.min.js\");\n\n\n//# sourceURL=webpack:///./js/dependencies.js?");
 
 /***/ }),
 

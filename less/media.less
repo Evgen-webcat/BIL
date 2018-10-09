@@ -23,7 +23,7 @@
 
     .screen_2 {
 
-        .screen_2_content {
+        &_content {
             flex-wrap: wrap;
 
             .services {
@@ -48,12 +48,42 @@
     }
 
     .screen_3 {
+        .screen_caption {
+            display: block;
+            font-size: 2.5rem;
+        }
+
         .screen_paragraph {
-            margin-top: 0;
+            margin-top: 20px;
         }
 
         .statistics {
             display: none;
+        }
+    }
+
+    .screen_4 {
+        .projects {
+            .project {
+                &_content {
+                    bottom: 50%;
+                    left: 0;
+                    transform: translateY(50%);
+                    width: 100%;
+                    text-align: center;
+
+                    &_caption {
+
+                        &::before {
+                            display: none;
+                        }
+                    }
+
+                    &_paragraph {
+                        display: none;
+                    }
+                }
+            }
         }
     }
 
@@ -83,10 +113,12 @@
                         display: none;
                     }
                 }
+
                 &:hover {
                     .employee_content {
                         transform: translateY(0);
                     }
+
                     &::after {
                         display: none;
                     }
@@ -131,4 +163,43 @@
     }
 }
 
-@media (max-width: 768px) {}
+@media (max-width: 500px) {
+    .header {
+        top: 10px;
+    }
+
+    .screen_1 .logo_wrap {
+        width: 70%;
+    }
+
+    .screen_2 {
+        &_content {
+            .services_content {
+                top: 50px;
+                left: 0;
+                transform: translate(0);
+                width: 100%;
+
+                &_paragraph {
+                    padding: 0 10px;
+                    box-sizing: border-box;
+                    bottom: -10px;
+                    line-height: 1.2;
+                }
+            }
+        }
+    }
+
+    .screen_4 .projects .project {
+        &_content {
+            &_caption {
+                font-size: 1rem;
+            }
+
+            &_paragraph {
+                margin-top: 10px;
+                font-size: .9rem;
+            }
+        }
+    }
+}
