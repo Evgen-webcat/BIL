@@ -30,4 +30,9 @@ $(document).ready(function () {
         $(this).find('.project_content_paragraph').slideUp();
         $('.projects').css('background-image', '');
     });
+
+    if ($(window).width() > 1024) {
+        var src = $('.screen_video_background').data('src');
+        $('.screen_video_background').vide(src);
+    }
 });
