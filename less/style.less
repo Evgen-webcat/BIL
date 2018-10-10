@@ -18,7 +18,7 @@ body {
 
 .header {
     z-index: 999;
-    position: fixed;
+    position: absolute;
     top: 30px;
     left: 70px;
 
@@ -728,6 +728,10 @@ body {
         &_img {
             fill: #000;
             transition: .3s ease-in-out;
+
+            .mouse_wheel {
+                animation: wheel 1.5s ease-in-out infinite;
+            }
 
             &.white {
                 fill: #fff;

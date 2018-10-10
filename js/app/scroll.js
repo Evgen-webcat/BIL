@@ -10,6 +10,9 @@ $(document).ready(function () {
 
     $('.dot').eq(0).addClass('active');
     $('.dots').data('index', '1');
+    if ($(window).width() < 1025) {
+        $('.social_links, .dots, .mouse_img').removeClass('white');
+    }
 
     $('.dot').click(function () {
         var index = $(this).index();
@@ -95,20 +98,28 @@ $(document).ready(function () {
                     }, 500);
                 }
 
-                if (screen === 0 || screen === 5) {
+                if (screen === 0) {
+                    if ($(window).width() < 1025) {
+                        setTimeout(function () {
+                            $('.social_links, .dots, .mouse_img').removeClass('white');
+                        }, 2000);
+                    } else {
+                        setTimeout(function () {
+                            $('.social_links, .dots, .mouse_img').addClass('white');
+                        }, 2000);
+                    }
+                } else if (screen === 5) {
                     setTimeout(function () {
                         $('.social_links, .dots, .mouse_img').removeClass('white');
                     }, 2000);
                 } else if (screen === 4) {
-                    $(window).on('resize', function () {
-                        if ($(window).width() > 1024) {
-                            $('.social_links').removeClass('white');
-                            $('.dots, .mouse_img').addClass('white');
-                        } else {
-                            $('.social_links').addClass('white');
-                            $('.dots, .mouse_img').addClass('white');
-                        }
-                    });
+                    if ($(window).width() >= 1025) {
+                        $('.social_links').removeClass('white');
+                        $('.dots, .mouse_img').addClass('white');
+                    } else {
+                        $('.social_links').addClass('white');
+                        $('.dots, .mouse_img').addClass('white');
+                    }
                 } else {
                     $('.social_links, .dots, .mouse_img').addClass('white');
                 }
